@@ -19,7 +19,18 @@ exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
  
 //função sem retorno e sem parametro
 function verificarChute() {
-    console.log(numeroSecreto);
+    // vai pegar o valor(value) da tag input no html e armazenar na variável chute
+    let chute = document.querySelector('input').value;
+    if (chute == numeroSecreto) {
+        exibirTextoNaTela('h1', 'Acertou!');
+        exibirTextoNaTela('p', 'Parabéns, Você descobriu o número secreto');
+    }
+    else if (chute > numeroSecreto) {
+        exibirTextoNaTela('p', 'O número secreto é menor');
+    }
+    else {
+        exibirTextoNaTela('p', 'O número secreto é maior');
+    }
 }
 
 //função com retorno
