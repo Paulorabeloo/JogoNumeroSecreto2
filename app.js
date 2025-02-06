@@ -11,7 +11,7 @@ let numeroSecreto = gerarNumeroAleatorio();
 //função com parametros
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
-    campo.innerHTML = texto
+    campo.innerHTML = texto;
 }
 
 exibirTextoNaTela('h1', 'Jogo do número secreto');
@@ -35,5 +35,5 @@ function verificarChute() {
 
 //função com retorno
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10 + 1) //parseInt vai transformar em número inteiro
+    return parseInt(Math.random() * 10 + 1); //parseInt vai transformar em número inteiro
 }
