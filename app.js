@@ -1,3 +1,5 @@
+// Jogo do Número Secreto
+
 //let titulo = document.querySelector('h1'); //selecionou a tag h1 no html
 //titulo.innerHTML = 'Jogo do número secreto'
 
