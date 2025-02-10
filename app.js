@@ -6,6 +6,7 @@
 // os 2 jeitos funcionam mas boa prática é o de baixo:
 
 // vai gerar o número aleatorio e guardar na variável
+let listaDeNumerosSorteados = []; //Lista vazia
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -45,7 +46,14 @@ function verificarChute() {
 
 //função com retorno
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10 + 1); //parseInt vai transformar em número inteiro
+    let numeroEscolhido = parseInt(Math.random() * 10 + 1); //parseInt vai transformar em número inteiro
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) { // se o número ja esta sorteado faça
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido); //adicionar na lista (ao final da lista)
+        console.log(listaDeNumerosSorteados);
+        return numeroEscolhido;
+    }
 }
 
 function limparCampo() {
